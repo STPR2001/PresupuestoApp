@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="main.css" rel="stylesheet" />
+    <title>Presupuesto</title>
+  </head>
+  <body onload="cargarApp()">
+
+    <div class="cabecero">
+      <div class="presupuesto">
+        <div class="prespuesto_titulo">
+            Prespuesto Disponible
+        </div>
+        <div class="presupuesto_valor" id="presupuesto">+ 2,000</div>
+        <div class="presupuesto_ingreso limpiarEstilos">
+            <div class="prespuesto_ingreso--texto">INGRESOS</div>
+            <div class="derecha">
+                <div class="prespuesto_ingreso--valor" id="ingresos">+ 4,000</div>
+                <div class="prespupuesto_ingreso--porcentaje">&nbsp;</div>
+            </div>
+        </div>
+        <div class="presupuesto_egreso limpiarEstilos">
+            <div class="prespuesto_egreso--texto">EGRESOS</div>
+            <div class="derecha limpiarEstilos">
+                <div class="prespupuesto_egreso--valor" id="egresos">- 1,900</div>
+                <div class="prespupuesto_egreso--porcentaje" id="porcentaje">45%</div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <script src="js/classDato.js"></script>
+    <script src="js/classIngreso.js"></script>
+    <script src="js/classEgreso.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+  <footer>
+    <p></p>
+  </footer>
+</html>

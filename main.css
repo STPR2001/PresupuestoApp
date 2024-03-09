@@ -1,0 +1,55 @@
+body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.cabecero{
+    padding: 50px;
+    background-color: beige;
+
+}
+.prespuesto_titulo{
+    font-size: 20px;
+    text-align: center;
+}
+.presupuesto_valor{
+    font-size: 30px;
+    margin:10px;
+    text-align: center;
+}
+.presupuesto_ingreso{
+    background-color: rgb(4, 156, 4);
+    padding: 10px;
+    width: 40%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.prespuesto_ingreso--texto{
+    color:white;
+}
+.prespuesto_ingreso--valor{
+    color:white;
+}
+
+
+.presupuesto_egreso{
+    background-color: #ff6047;
+    padding: 10px;
+    width: 40%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+.prespuesto_egreso--texto{
+    color:white;
+}
+.prespupuesto_egreso--valor{
+    color:white;
+}
+.prespupuesto_egreso--porcentaje{
+    color:white;
+}
+
