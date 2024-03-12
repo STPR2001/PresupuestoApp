@@ -36,14 +36,12 @@
       <div class="agregar">
         <div class="agregar_contenedor">
           <select class="agregar_tipo" id="tipo">
-            <option value="ingreso" selected>+</option>
-            <option value="egreso">-</option>
+            <option value="ingreso" selected>Ingreso</option>
+            <option value="egreso">Egreso</option>
           </select>
           <input required type="text" class="agregar_descripcion" placeholder="Agregar descripción" id="descripcion"/>
           <input required type="number" class="agregar_valor" placeholder="Agregar valor" id="valor" step="any" />
-          <button class="agregar_btn" onclick="agregarDato()">
-            <ion-icon name="checkmark-circle-outline"></ion-icon>
-          </button>
+          <button class="agregar_btn" onclick="agregarDato()">Agregar</button>
         </div>
       </div>
     </form>

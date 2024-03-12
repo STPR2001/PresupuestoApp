@@ -1,10 +1,10 @@
 body{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(220, 231, 231);
 }
 
 .cabecero{
     padding: 50px;
-    background-color: beige;
 
 }
 .prespuesto_titulo{
@@ -12,13 +12,13 @@ body{
     text-align: center;
 }
 .presupuesto_valor{
-    font-size: 30px;
+    font-size: 50px;
     margin:10px;
     text-align: center;
 }
 .presupuesto_ingreso{
-    background-color: rgb(4, 156, 4);
-    padding: 10px;
+    background-color: rgb(0, 107, 207);
+    padding: 15px;
     width: 40%;
     margin: 0 auto;
     display: flex;
@@ -36,7 +36,7 @@ body{
 
 .presupuesto_egreso{
     background-color: #ff6047;
-    padding: 10px;
+    padding: 15px;
     width: 40%;
     margin: 0 auto;
     display: flex;
@@ -64,31 +64,49 @@ body{
   .ingreso_titulo {
     text-align: center; 
     margin-bottom: 10px; 
+    font-size: 20px;
   }
 
 .elemento{
-    background-color: rgb(233, 233, 233);
+    background-color: #FF6047;
     padding: 10px;
-    width: 50%;
+    width: 70%;
     margin: 0 auto;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    border-radius: 5px;
+    border-radius: 3px;
     margin-bottom: 5px;
 }
+
+.elementoIngreso{
+    background-color: #006BCF;
+    padding: 10px;
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 3px;
+    margin-bottom: 5px;
+}
+
 .elemento_descripcion{
-    color:black
+    color:white;
 }
 .elemento_valor{
-    color:black;
+    color:white;
 }
 
   
-.elemento_eliminar--btn ion-icon {
+.elemento_eliminar--btn{
     font-size: 20px;
-    color: red; 
+    color: white;
+    border-width: 0px; 
+    background-color: transparent;
 
 }
+
   
 .egreso{
     float: left;
@@ -99,6 +117,7 @@ body{
 .egreso_titulo{
     text-align: center; 
     margin-bottom: 10px;
+    font-size: 20px;
 }
 
 .contenedor{
@@ -110,7 +129,53 @@ body{
 }
 
 .agregar{
-    background-color: rgb(209, 208, 208);
-    padding: 10px;
+    background-color: rgb(3, 150, 108);
+    padding: 15px;
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
     text-align: center;
+
+}
+
+.agregar_descripcion{
+    padding: 7px;
+    border-radius: 3px;
+    border: 0px;
+}
+.agregar_valor{
+    padding: 7px;
+    border-radius: 3px;
+    border: 0px;
+}
+
+.agregar_tipo{
+    padding: 7px;
+    border-radius: 3px;
+    border: 0px;
+}
+.agregar_btn{
+    background-color: rgb(1, 123, 88);
+    border-radius: 3px;
+    border: 0px;
+    color: white;
+    padding: 7px;
+}
+.agregar_btn:hover{
+    background-color: rgb(1, 81, 59);;
+}
+
+.derecha{
+    display: flex;
+    flex-direction: row;
+}
+
+.prespupuesto_egreso--porcentaje{
+    background-color: #e8432a;
+    padding: 2px;
+    border-radius: 2px;
+    margin-left: 5px;
+
+
 }
