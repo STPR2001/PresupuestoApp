@@ -1,15 +1,7 @@
 console.log("Scirpt agregado correctamente")
 
-const ingresos = [
-    new Ingreso("Sueldo", 2100.00),
-    new Ingreso("Venta casa", 3000)
-];
-
-const egresos = [
-    new Egreso("Alquiler casa", 1000),
-    new Egreso("Ropa cara", 400),
-    new Egreso("comida", 300)
-]
+const ingresos = [];
+const egresos = [];
 
 let cargarApp = () => {
     cargarCabecero();
@@ -67,14 +59,22 @@ const crearIngresoHTML = (ingreso) => {
               <div class="elemento_valor">${formatoMoneda(ingreso.valor)}</div>
               <div class="elemento_eliminar">
                 <button class="elemento_eliminar--btn">
-                  <ion-icon name="trash-outline"></ion-icon>
+                  <ion-icon name="trash-outline"
+                  onclick="eliminarIngreso(${ingreso.id})" ></ion-icon>
                 </button>
             </div>
         </div>
     </div>
     `;
     return ingresoHTML;
-} 
+}
+
+const eliminarIngreso = (id) => {
+    let indiceEliminar = ingresos.findIndex(ingreso => ingreso.id === id);
+    ingresos.splice(indiceEliminar, 1);
+    cargarCabecero();
+    cargarIngresos();
+}
 
 const cargarEgresos = () => {
     let egresosHTML = "";
@@ -93,11 +93,49 @@ const crearEgresoHTML = (egreso) => {
               <div class="elemento_porcentaje">${formatoPorcentaje(egreso.valor/totalIngresos())}</div>
               <div class="elemento_eliminar">
                 <button class="elemento_eliminar--btn">
-                  <ion-icon name="trash-outline"></ion-icon>
+                  <ion-icon name="trash-outline"
+                  onclick="eliminarEgreso(${egreso.id})" ></ion-icon>
                 </button>
             </div>
         </div>
     </div>
     `;
     return egresoHTML;
+}
+
+const eliminarEgreso = (id) =>{
+    let indiceEliminar = egresos.findIndex(egreso => egreso.id === id);
+    egresos.splice(indiceEliminar, 1);
+    cargarCabecero();
+    cargarEgresos();
+}
+
+function agregarDato() {
+
+const $form = document.getElementById("forma");
+let $descripcion = $form["descripcion"].value;
+let $valor = $form["valor"].value;
+let $tipo = document.getElementById("tipo");
+
+if($descripcion != "" && $valor != ""){
+
+if($tipo.value === "ingreso"){
+    ingreso = new Ingreso($descripcion, +$valor);
+    ingresos.push(ingreso);
+    cargarIngresos();
+}
+else{
+    egreso = new Egreso($descripcion, +$valor);
+    egresos.push(egreso);
+    cargarEgresos();
+}
+
+cargarCabecero();
+
+}
+else{
+    $mensajeError.innerHTML = "Completa todos los campos";
+}
+
+
 }
