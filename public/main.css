@@ -77,6 +77,7 @@ body{
     justify-content: space-between;
     border-radius: 3px;
     margin-bottom: 5px;
+    
 }
 
 .elementoIngreso{
@@ -143,17 +144,20 @@ body{
     padding: 7px;
     border-radius: 3px;
     border: 0px;
+    margin:3px;
 }
 .agregar_valor{
     padding: 7px;
     border-radius: 3px;
     border: 0px;
+    margin:3px;
 }
 
 .agregar_tipo{
     padding: 7px;
     border-radius: 3px;
     border: 0px;
+    margin:3px;
 }
 .agregar_btn{
     background-color: rgb(1, 123, 88);
@@ -161,6 +165,7 @@ body{
     border: 0px;
     color: white;
     padding: 7px;
+    margin:3px;
 }
 .agregar_btn:hover{
     background-color: rgb(1, 81, 59);;
@@ -176,6 +181,31 @@ body{
     padding: 2px;
     border-radius: 2px;
     margin-left: 5px;
+}
+
+#footer{
+    padding: 7px;
+    margin-top: 50px;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
 
 
+
+
+@media screen and (max-width: 768px) {
+    .cabecero, .presupuesto_ingreso, .presupuesto_egreso, .elemento, .elementoIngreso, .agregar {
+        width: 100%;
+        padding: 3% 5%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cabecero, .presupuesto_ingreso, .presupuesto_egreso, .elemento, .elementoIngreso, .agregar {
+        width: 90%;
+        padding: 5% 10%;
+    }
 }
